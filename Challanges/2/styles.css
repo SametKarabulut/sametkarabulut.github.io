@@ -19,32 +19,32 @@ body {
   justify-content: center;
 }
 
-.shape1{
+.ucgen{
   
   width: 0;
   height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 200px solid #a8a311;
+  border-bottom: 200px solid rgb(240, 184, 110);
 }
 
 
-.shape2{
+.kare{
   width: 200px; 
   height: 200px; 
-  background-color: #ce7d12;
+  background-color: rgb(237, 123, 123);;
   margin: 20px;
 }
 
-.shape3{
+.dikdortgen{
   width: 400px; 
   height: 0; 
-  border-bottom: 200px solid #a03030; 
+  border-bottom: 200px solid rgb(131, 96, 150); 
   }
-  .shape4{
+  .hamza{
   width: 200px;
   height: 200px;
-  background-color: #7e35a5;
+  background-color: rgb(235, 231, 108);
   border-radius: 50%; 
 }
 
@@ -57,18 +57,18 @@ body {
 }
 
 .section1 {
-  background-color: #ebe76c;
+  background-color: rgba(235, 231, 108, 0.5);
 }
 .section2 {
-  background-color: #f0b86e;
+  background-color: rgba(240, 184, 110, 0.5);
 }
 
 .section3 {
-  background-color: #ed7b7b;
+  background-color: rgba(237, 123, 123, 0.5);
 }
 
 .section4 {
-  background-color:#836096;
+  background-color:rgba(131, 96, 150, 0.5);
 }
 
 .cross {
