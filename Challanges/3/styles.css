@@ -1,3 +1,16 @@
+
+body nav{
+  position: absolute;
+  top: 63px;
+  right: 360px; 
+}
+
+.body-logo{
+  position: absolute;
+  top: 50px;
+  left: 360px; 
+}
+
 .nav-button {
   display: inline-block;
   padding: 10px 20px;
@@ -49,7 +62,7 @@
   .dropdown-arrow {
         position: absolute;
         top: -12px;
-        left: 0;
+        left: -0px;
         width: 100%;
         height: 100%;
         z-index: 1;     
@@ -57,7 +70,7 @@
 
 .nav-arrow{
     top: 0;
-    left: -50px;
-
+    left: 0;
     z-index: 1; 
+    margin-left: -15px;
 }
