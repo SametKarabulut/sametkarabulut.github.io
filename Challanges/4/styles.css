@@ -172,7 +172,7 @@ body{
       position: relative;
       bottom: 0;
       width: 380px;
-      height: 290px;
+      height: 115px;
       object-fit: fill;
       border-radius: 10px;
       z-index: 0;
@@ -282,4 +282,58 @@ body{
   margin: 0 0 10px;
   line-height: 1.52;
   z-index: 1;
+}
+
+
+.shadow5{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+  position: relative;
+  top: 624px;
+  width: 380px;
+  height: 165px;
+  object-fit: fill;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.text3{
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  left: 30px;
+  top: 0;
+  color: #fff;
+  font-style: italic;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  margin: 0 0 10px;
+  z-index: 1;
+  max-width: 320px;
+}
+
+
+.text3yz{
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  left: 30px;
+  top: 0;
+  color: #fff;
+  font-style: normal;
+  font-size: 21px;
+  font-weight: bold;
+  font-stretch: normal;
+  margin: 0 0 10px;
+  line-height: 1.52;
+  z-index: 1;
+}
+
+.shadow6 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+  position: relative;
+  bottom: 0;
+  width: 380px;
+  height: 380px;
+  object-fit: fill;
+  border-radius: 10px;
+  z-index: 0;
 }
