@@ -1,0 +1,13 @@
+body{
+    display: flex;
+}
+.nav-button{
+        position: relative;
+        left: 719px;
+        border: none;
+        width: 85px;
+        height: 25px;
+        margin: 0 0 0 50px;
+        font-size: 15px;
+        font-weight: 500;
+}
