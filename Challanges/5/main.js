@@ -1,5 +1,5 @@
 const apiUrl = "https://raw.githubusercontent.com/cuneydbolukoglu/challenge/main/challenge-carousel.json";
-const slides = document.querySelector('.slide img');
+const slides = document.querySelector('.slide');
 const prevButton = document.querySelector('.slider-prev');
 const nextButton = document.querySelector('.slider-next');
 const indicators = document.querySelectorAll('.indicator');
@@ -28,15 +28,17 @@ function updateIndicators(index){
     indicators[index].classList.add('active')
 }
 
+const slidesimgs = document.querySelector('.slide img');
+
 function showSlide(index) {
-  slides.forEach(slide => slide.style.display = 'none');
-  slides[index].style.display = 'block';
+    slidesimgs.forEach(slide => slide.style.display = 'none');
+    slidesimgs[index].style.display = 'block';
 }
 
 function prevSlide() {
   currentSlide--;
   if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
+    currentSlide = slidesimgs.length - 1;
 
   }
   showSlide(currentSlide);
@@ -45,7 +47,7 @@ function prevSlide() {
 
 function nextSlide() {
   currentSlide++;
-  if (currentSlide >= slides.length) {
+  if (currentSlide >= slidesimgs.length) {
     currentSlide = 0;
   }
   showSlide(currentSlide);
