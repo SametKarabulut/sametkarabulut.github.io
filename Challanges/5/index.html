@@ -5,16 +5,45 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Challange 5 - Samet Karabulut</title>
           <link rel="stylesheet" href="styles.css">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;500&family=Satisfy&family=Source+Code+Pro:ital,wght@1,900&display=swap" rel="stylesheet">
         </head>
         <body>
-          <div>
+          <div class="container">
           <img src="./assets/img/logo.png" alt="logo" class="body-logo">
           <nav>
-            <a href="#" class="nav-button">Ürünlerimiz</a>
+            <a href="#" class="nav-button del">Ürünlerimiz</a>
             <a href="#" class="nav-button">Hakkımızda</a>
             <a href="#" class="nav-button">Fiyatlar</a>
           </nav>
-          <submit type="button">İletişime Geç</submit>
+          <div class="butondiv">
+            <submit type="button">İletişime Geç</submit>
+          </div>
         </div>
+        <div class="slider">
+          <div class="slide">
+            <img src="./assets/img/slider1.png" alt="slider1">
+          </div>
+          <div class="slide closedslider">
+            <img src="./assets/img/slider2.png" alt="slider2">
+          </div>
+          <div class="slide closedslider">
+            <img src="./assets/img/slider3.jpg" alt="slider3">
+          </div>6
+           <div class="slider-controls">
+            <button class="slider-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="5.832" height="10" viewBox="0 0 5.832 10">
+                <path d="M.244 4.412a.834.834 0 0 0 0 1.179l4.165 4.165a.834.834 0 0 0 1.179-1.179L2.011 5l3.574-3.577A.834.834 0 1 0 4.406.244L.241 4.409z"/>
+            </svg>
+            </button>
+            <button class="slider-next">
+              <svg style="transform: rotate(180deg);" xmlns="http://www.w3.org/2000/svg" width="5.832" height="10" viewBox="0 0 5.832 10">
+                <path d="M.244 4.412a.834.834 0 0 0 0 1.179l4.165 4.165a.834.834 0 0 0 1.179-1.179L2.011 5l3.574-3.577A.834.834 0 1 0 4.406.244L.241 4.409z"/>
+            </svg>
+            </button>
+          </div>
+        </div>
+        <script src="./main.js"></script>
         </body>
         </html>
