@@ -32,22 +32,10 @@ header{
 * {
     font-family: Poppins, sans-serif;
 }
-    /* .container{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: auto;
-    } */
 
     nav{
         display: inline;
     }
-
-    /*header img{
-        position: absolute;
-        left: 360px;
-
-    }*/
 
     submit[type="button"] {
     font-size: 15px;
@@ -151,6 +139,7 @@ header{
         border-radius: 50%;
         margin: 0 5px;
         transition: background-color 0.3s ease;
+        cursor: pointer;
       }
       
       .active {
