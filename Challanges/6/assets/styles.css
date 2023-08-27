@@ -51,7 +51,7 @@ input[type="text"]{
   max-width: 320px;
   height: 55px;
   width: 320px;
-  border: solid 1px #344b80;
+  border: solid 1px var(--color3);
   border-radius: 5px;
   text-align: left;
   padding-left: 30px;
@@ -67,4 +67,37 @@ input[type="text"]{
     display: flex;
     gap: 30px;
 
+}
+
+.test1:focus{
+  border: solid 1px var(--color1) !important;
+  color: var(--color1) !important;
+}
+
+label {
+  width: 39px;
+  height: 25px;
+  margin: 46px 50px 44px 10px;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: #344b80;
+}
+
+
+input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #344b80;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  border: 20px solid black;
 }
