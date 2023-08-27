@@ -40,6 +40,31 @@ text-align: left;
 }
 
 .formarea{
+    margin: auto;
+    justify-content: center;
     display: grid;
-    
+    gap: 30px;
+}
+
+input[type="text"]{
+  max-height: 55px;
+  max-width: 320px;
+  height: 55px;
+  width: 320px;
+  border: solid 1px #344b80;
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.iconmail{
+  position: absolute;
+  left: 1300px;
+  top: 513px;
+}
+
+.area1,  .area2{
+    display: flex;
+    gap: 30px;
+
 }
