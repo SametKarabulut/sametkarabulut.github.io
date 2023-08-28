@@ -57,10 +57,22 @@ input[type="text"]{
   padding-left: 30px;
 }
 
-.iconmail{
+.iconmail {
+  width: 18px; /* SVG boyutunu belirle */
+  height: 18px;
+  fill: #344b80;
+  margin-right: 10px;
+}
+input[type="text"][placeholder="Mail"] {
+  padding-left: 30px;
+  position: relative;
+}
+
+input[type="text"][placeholder="Mail"] + .iconwithspan1 {
   position: absolute;
-  left: 1300px;
-  top: 513px;
+  left: 100%; /* input öğesinin sağ tarafına sabitle */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .area1,  .area2{
@@ -69,9 +81,16 @@ input[type="text"]{
 
 }
 
-.test1:focus{
+input[type="text"]:focus{
   border: solid 1px var(--color1) !important;
   color: var(--color1) !important;
+}
+
+.iconwithspan1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
 }
 
 label {
@@ -96,8 +115,99 @@ input[type="radio"] {
   border: 2px solid #344b80;
   margin-right: 10px;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0.2rem solid #fff;
+  background-color: var(--color1);
+  border-radius: 50%;
 }
 
+
 input[type="radio"]:checked {
-  border: 20px solid black;
+  box-shadow: 0 0 0 1px var(--color1);
+  background-color: var(--color1);
+  border-width: 0.2rem;
+}
+
+.area3{
+    max-height: 59px;
+    display: flex;
+    align-items: center;
+}
+
+select{
+  max-height: 55px;
+  max-width: 350px;
+  height: 55px;
+  width: 350px;
+  border: solid 1px var(--color3);
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 30px;
+  margin-left: auto;
+}
+
+.sendimg{
+  position: absolute;
+}
+
+#mesaj{
+  max-height: 140px;
+  max-width: 707px;
+  height: 140px;
+  width: 707px;
+  border: solid 1px var(--color3);
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 30px;
+  margin-left: auto;
+}
+
+textarea {
+  width: 697px;
+  height: 140px;
+  margin: auto;
+  position: relative; 
+  padding: 10px;
+  padding-left: 30px;
+  border: 1px solid var(--color3);
+  border-radius: 5px;
+  resize: none; 
+}
+
+textarea::placeholder {
+  /*position: absolute;
+  top: 10px;
+  left: 30px;
+  color: var(--color3);*/
+  color: var(--color3);
+  margin-left: 30px;
+}
+
+input[type="submit"]{
+  width: 161px;
+  height: 55px;
+  background-color: var(--color1);
+  color: var(--color2);
+  border-radius: 5px;
+}
+
+.area5{
+  display: flex;
+}
+
+.send-button {
+  padding: 15px 40px;
+  background-color: var(--color1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  fill: white;
+  margin-right: 10px;
 }
