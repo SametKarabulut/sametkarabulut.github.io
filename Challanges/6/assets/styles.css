@@ -35,7 +35,7 @@ letter-spacing: normal;
 text-align: left;
 }
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -52,25 +52,27 @@ input[type="text"]{
   height: 55px;
   width: 320px;
   border: solid 1px var(--color3);
+  opacity: 0.2;;
   border-radius: 5px;
   text-align: left;
   padding-left: 30px;
+  outline: none;
 }
 
 .iconmail {
-  width: 18px; /* SVG boyutunu belirle */
-  height: 18px;
-  fill: #344b80;
-  margin-right: 10px;
+  position: absolute;
+  left: 30px;
 }
+
 input[type="text"][placeholder="Mail"] {
-  padding-left: 30px;
+  padding-left: 59px;
   position: relative;
+  width: 291px;
 }
 
 input[type="text"][placeholder="Mail"] + .iconwithspan1 {
   position: absolute;
-  left: 100%; /* input öğesinin sağ tarafına sabitle */
+  left: 100%; 
   top: 50%;
   transform: translateY(-50%);
 }
@@ -78,12 +80,12 @@ input[type="text"][placeholder="Mail"] + .iconwithspan1 {
 .area1,  .area2{
     display: flex;
     gap: 30px;
-
 }
 
 input[type="text"]:focus{
   border: solid 1px var(--color1) !important;
   color: var(--color1) !important;
+  opacity: 1;
 }
 
 .iconwithspan1 {
@@ -117,8 +119,6 @@ input[type="radio"] {
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  border: 0.2rem solid #fff;
-  background-color: var(--color1);
   border-radius: 50%;
 }
 
@@ -126,7 +126,8 @@ input[type="radio"] {
 input[type="radio"]:checked {
   box-shadow: 0 0 0 1px var(--color1);
   background-color: var(--color1);
-  border-width: 0.2rem;
+  border: 10px solid white;
+  border-width: 10px;
 }
 
 .area3{
@@ -138,13 +139,17 @@ input[type="radio"]:checked {
 select{
   max-height: 55px;
   max-width: 350px;
-  height: 55px;
   width: 350px;
+  height: 55px;
   border: solid 1px var(--color3);
   border-radius: 5px;
   text-align: left;
   padding-left: 30px;
   margin-left: auto;
+  appearance: none;
+  padding-right: 30px;
+  font-size: 16px;
+  color: var(--color1);
 }
 
 .sendimg{
@@ -176,10 +181,6 @@ textarea {
 }
 
 textarea::placeholder {
-  /*position: absolute;
-  top: 10px;
-  left: 30px;
-  color: var(--color3);*/
   color: var(--color3);
   margin-left: 30px;
 }
@@ -211,3 +212,4 @@ input[type="submit"]{
   fill: white;
   margin-right: 10px;
 }
+
