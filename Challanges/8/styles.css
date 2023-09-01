@@ -1,0 +1,50 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@400;700&family=Satisfy&family=Source+Code+Pro:ital,wght@1,900&display=swap');
+
+
+:root{
+    --tablebordercolor: #d2e0f1;
+    --tablebgcolor1:  #f5f9ff;
+    --tablebgcolor2: #fff;
+    --tableeditcolor: #e6eeff;
+    --tabletextcolor: #adc5e2;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    color: var(--tabletextcolor);
+}
+
+
+table{
+    border: 1px solid var(--tablebordercolor);
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 350px;
+    
+}
+
+th, td {
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: center; 
+}
+
+
+
+tr:nth-child(even) {
+    background-color: var(--tablebgcolor2); 
+}
+
+tr:nth-child(odd) {
+    background-color: var(--tablebgcolor1); 
+}
+
+th{
+    background-color: var(--tablebgcolor1); 
+}
+
+.disable{
+    display: none;
+}
