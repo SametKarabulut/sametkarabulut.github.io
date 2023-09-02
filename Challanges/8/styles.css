@@ -21,8 +21,14 @@ table{
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    margin-top: 350px;
     
+    
+}
+
+table:first::before{
+    content: "";
+    height: 350px;
+    display: block;
 }
 
 th, td {
