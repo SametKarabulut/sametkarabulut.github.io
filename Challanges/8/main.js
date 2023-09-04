@@ -1,40 +1,6 @@
-
-/*
-const editButtons = document.querySelectorAll('.edit-button');
-
-editButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const row = button.closest('tr'); 
-
-    row.contentEditable = true;
-    row.classList.add('editable-row');
-
-    button.style.display = 'none';
-    const saveButton = document.createElement('button');
-    saveButton.add;
-    
-    saveButton.addEventListener('click', () => {
-      row.contentEditable = false;
-      row.classList.remove('editable-row');
-      button.style.display = 'inline'; 
-      saveButton.remove(); 
-    });
-
-    const saveCell = document.createElement('td');
-    saveCell.appendChild(saveButton);
-    row.appendChild(saveCell);
-  });
-});
-
-*/
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const tableContainer = document.querySelector(".table-container");
   const columnNames = ["İsim", "Soyisim", "Meslek", "Yaş", "Telefon", "Adres", ""];
-
 
   const thead = document.createElement("thead");
   const headerRow = document.createElement("tr");
@@ -47,12 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   thead.appendChild(headerRow);
 
-
   const table = document.createElement("table");
   table.appendChild(thead);
 
-
-  const numberOfCalls = 15;
+  const numberOfCalls = 5;
 
   for (let i = 0; i < numberOfCalls; i++) {
     axios.get("https://randomuser.me/api/").then((response) => {
@@ -74,7 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const editButton = document.createElement("button");
-      editButton.textContent = "Düzenle";
+      const svgIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svgIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+      svgIcon.setAttribute("width", "15");
+      svgIcon.setAttribute("height", "15");
+      svgIcon.setAttribute("viewBox", "0 0 15 15");
+
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", "M13.02 5.548.357.357a.706.706 0 0 1 0 1l-.859.862-1.361-1.36.859-.859a.706.706 0 0 1 1 0zm-6.826 5.825 3.962-3.965 1.361 1.361-3.965 3.962a.706.706 0 0 1-.307.18l-1.727.489.493-1.727a.706.706 0 0 1 .18-.307zm4.821-6.826L5.19 10.369a2.109 2.109 0 0 0-.54.918l-.844 2.953a.709.709 0 0 0 .877.877l2.952-.844a2.133 2.133 0 0 0 .918-.54l5.825-5.823a2.126 2.126 0 0 0 0-3.005l-.357-.357a2.126 2.126 0 0 0-3.006-.001zM2.6 5.7A2.6 2.6 0 0 0 0 8.3v8.03a2.6 2.6 0 0 0 2.6 2.6h8.03a2.6 2.6 0 0 0 2.6-2.6v-3.31a.709.709 0 1 0-1.417 0v3.307a1.181 1.181 0 0 1-1.181 1.181H2.6a1.181 1.181 0 0 1-1.181-1.181V8.3A1.181 1.181 0 0 1 2.6 7.116h3.3a.709.709 0 0 0 0-1.416z");
+      path.style.fill = "#adc5e2";
+
+      svgIcon.appendChild(path);
+      editButton.appendChild(svgIcon);
+      editButton.classList.add("edit-button"); 
 
       const tdForButton = document.createElement("td");
       tdForButton.appendChild(editButton);
@@ -94,32 +70,34 @@ document.addEventListener("DOMContentLoaded", function () {
   tableContainer.appendChild(table);
 });
 
+document.addEventListener('click', function(event) {
+  const target = event.target;
+  if (target.classList.contains('edit-button')) {
+    const row = target.closest('tr');
+    const cells = row.querySelectorAll('td');
 
-const editButtons = document.querySelectorAll('.edit-button');
-
-editButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const row = button.closest('tr'); 
-
-    row.contentEditable = true;
-    row.classList.add('editable-row');
-
-    button.style.display = 'none';
-    const saveButton = document.createElement('button');
-    saveButton.add;
-    
-    saveButton.addEventListener('click', () => {
-      row.contentEditable = false;
-      row.classList.remove('editable-row');
-      button.style.display = 'inline'; 
-      saveButton.remove(); 
+    cells.forEach((cell) => {
+      const input = document.createElement('input');
+      input.value = cell.textContent;
+      cell.textContent = '';
+      cell.appendChild(input);
     });
 
-    const saveCell = document.createElement('td');
-    saveCell.appendChild(saveButton);
-    row.appendChild(saveCell);
-  });
+    const saveButton = document.createElement('button');
+    saveButton.textContent = 'Kaydet';
+
+    saveButton.addEventListener('click', function() {
+      const inputs = row.querySelectorAll('input');
+      inputs.forEach((input, index) => {
+        cells[index].textContent = input.value;
+      });
+      saveButton.remove();
+    });
+
+    row.appendChild(saveButton);
+  }
 });
+
 
 
 
