@@ -1,4 +1,4 @@
-//document.addEventListener("DOMContentLoaded", function () {
+
   const tableContainer = document.querySelector(".table-container");
   const columnNames = ["İsim", "Soyisim", "Meslek", "Yaş", "Telefon", "Adres", ""];
 
@@ -53,27 +53,10 @@
       editButton.appendChild(svgIcon);
       editButton.classList.add("edit-button"); 
 
-
-      /////////////////
-
       const saveButton = document.createElement("button");
-      /*const svgIconSave = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      svgIconSave.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-      svgIconSave.setAttribute("width", "14.997");
-      svgIconSave.setAttribute("height", "15");
-      svgIconSave.setAttribute("viewBox", "0 0 14.997 15");
-
-      const pathSave = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      pathSave.setAttribute("d", "M1.607 34.143v10.714a.537.537 0 0 0 .536.536h10.714a.537.537 0 0 0 .536-.536v-8.22a.538.538 0 0 0-.157-.378l1.135-1.135A2.144 2.144 0 0 1 15 36.641v8.217A2.145 2.145 0 0 1 12.854 47H2.143A2.145 2.145 0 0 1 0 44.857V34.143A2.145 2.145 0 0 1 2.143 32h8.22a2.144 2.144 0 0 1 1.517.626l2.494 2.494-1.135 1.135-2.5-2.491-.027-.027v3.352a.8.8 0 0 1-.8.8h-6.43a.8.8 0 0 1-.8-.8v-3.482h-.539a.537.537 0 0 0-.536.536zm2.679-.536v2.679h4.821v-2.679zm1.071 8.036A2.143 2.143 0 1 1 7.5 43.786a2.143 2.143 0 0 1-2.143-2.143z");
-      pathSave.style.fill = "#adc5e2";
-
-      svgIconSave.appendChild(pathSave);
-      SaveButton.appendChild(svgIconSave);*/
-
       saveButton.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="14.997" height="15" viewBox="0 0 14.997 15"> <path d="M1.607 34.143v10.714a.537.537 0 0 0 .536.536h10.714a.537.537 0 0 0 .536-.536v-8.22a.538.538 0 0 0-.157-.378l1.135-1.135A2.144 2.144 0 0 1 15 36.641v8.217A2.145 2.145 0 0 1 12.854 47H2.143A2.145 2.145 0 0 1 0 44.857V34.143A2.145 2.145 0 0 1 2.143 32h8.22a2.144 2.144 0 0 1 1.517.626l2.494 2.494-1.135 1.135-2.5-2.491-.027-.027v3.352a.8.8 0 0 1-.8.8h-6.43a.8.8 0 0 1-.8-.8v-3.482h-.539a.537.537 0 0 0-.536.536zm2.679-.536v2.679h4.821v-2.679zm1.071 8.036A2.143 2.143 0 1 1 7.5 43.786a2.143 2.143 0 0 1-2.143-2.143z" transform="translate(0 -32)" style="fill:#adc5e2"/> </svg>`;
       saveButton.classList.add("Save-button"); 
       saveButton.classList.add("disable"); 
-      /////////////////
 
       const tdForButton = document.createElement("td");
       tdForButton.appendChild(editButton);
@@ -92,12 +75,11 @@
   }
 
   tableContainer.appendChild(table);
-//});
-/*
 document.addEventListener('click', function(event) {
   const target = event.target;
   if (target.classList.contains('edit-button')) {
     const row = target.closest('tr');
+    row.classList.add('selectedRow');
     const cells = row.querySelectorAll('.data-list');
 
     cells.forEach((cell) => {
@@ -106,63 +88,23 @@ document.addEventListener('click', function(event) {
       cell.textContent = '';
       cell.appendChild(input);
     });
-    /*
-    const saveButton = document.createElement('button');
-    saveButton.textContent = 'Kaydet';
-*/
-document.addEventListener('click', function(event) {
-  const target = event.target;
-  if (target.classList.contains('edit-button')) {
-    const row = target.closest('tr');
-    const cells = row.querySelectorAll('.data-list');
-
-    cells.forEach((cell) => {
-      const input = document.createElement('input');
-      input.value = cell.textContent;
-      cell.textContent = '';
-      cell.appendChild(input);
-    });
-
-    // Şimdi düzenleme düğmesini devre dışı bırakalım
     target.classList.add('disable');
-
-    // Şimdi kaydet düğmesini etkinleştirelim
     const saveButton = row.querySelector('.Save-button');
     if (saveButton) {
       saveButton.classList.remove('disable');
-
-      // Kaydet düğmesine tıklanma olayını dinle
       saveButton.addEventListener('click', function() {
         const inputs = row.querySelectorAll('input');
         inputs.forEach((input, index) => {
           cells[index].textContent = input.value;
         });
-
-        // Inputları kaldır
         inputs.forEach((input) => {
           input.remove();
         });
-
-        // Düzenleme düğmesini etkinleştir
         target.classList.remove('disable');
-
-        // Kaydet düğmesini devre dışı bırak
         saveButton.classList.add('disable');
+        row.classList.remove('selectedRow');
       });
     }
   }
 });
 
-
-/*
-    saveButton.addEventListener('click', function() {
-      const inputs = row.querySelectorAll('input');
-      inputs.forEach((input, index) => {
-        cells[index].textContent = input.value;
-      });
-      saveButton.classList.add('disable');
-    });
-*/
-   // tdForButton.appendChild(SaveButton);
-/*  }
-});*/
