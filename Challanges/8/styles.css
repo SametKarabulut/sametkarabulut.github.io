@@ -21,6 +21,10 @@ table{
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+
     
     
 }
@@ -40,6 +44,7 @@ th, td {
 td input{
     border: 1px solid var(--tablebordercolor);
     border-radius: 6px;
+    outline: none;
 }
 
 button{
