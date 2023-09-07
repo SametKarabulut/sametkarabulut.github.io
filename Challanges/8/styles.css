@@ -21,12 +21,9 @@ table{
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-
-    
-    
 }
 
 table:first::before{
